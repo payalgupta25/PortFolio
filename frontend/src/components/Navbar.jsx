@@ -1,19 +1,78 @@
-import React from 'react'
+import React from 'react';
 
 function Navbar() {
-    return (
-        <div className=' bg-[#303030] z-1000 w-full h-20 text-white flex justify-between items-center px-5 text-2xl font-["Saira_Stencil_One"] sticky top-0 shadow-bottom shadow-white'>
-            <div className='flex items-center'>
-                <a href="/">PAYAL GUPTA</a><span className='text-orange-400'>!</span>
-            </div>
-            <div className='flex items-center space-x-5 font-["Saira_Stencil_One"] max-sm:hidden '>
-                <a href="" className='hover:text-orange-400 transition-colors'>Home</a>
-                <a href="#about" className='hover:text-orange-400 transition-colors'>About</a>
-                <a href="#" className='hover:text-orange-400 transition-colors'>Projects</a>
-                <a href="#" className='hover:text-orange-400 transition-colors'>Contact</a>
-            </div>
-        </div>
-    )
+  return (
+    <div className="w-full px-6 py-12 sm:p-16 md:p-20 bg-black flex flex-col justify-center items-center">
+      {/* Title */}
+      <div className="z-50 w-full text-center text-white text-3xl sm:text-5xl md:text-7xl font-['Saira_Stencil_One'] mb-8">
+        <a href="/">PAYAL GUPTA</a>
+        <span className="text-orange-400">!</span>
+      </div>
+
+      {/* Social Links */}
+      <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-6 sm:gap-10 mb-8">
+        {/* GitHub */}
+        <a
+          href="https://github.com/payalgupta25"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="flex items-center gap-2">
+            <img className="w-6 h-6 filter invert" src="./github.png" alt="GitHub" />
+            <p className="text-white text-base font-[poppins]">Github</p>
+          </div>
+        </a>
+
+        {/* Email */}
+        <a
+          href="https://mail.google.com/mail/?view=cm&to=payalgupta425@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="flex items-center gap-2">
+            <img className="w-6 h-6 filter invert" src="./email.png" alt="Email" />
+            <p className="text-white text-base font-[poppins]">Email</p>
+          </div>
+        </a>
+
+        {/* LinkedIn */}
+        <a
+          href="https://www.linkedin.com/in/payal-gupta-6a681a291/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="flex items-center gap-2">
+            <img className="w-7 h-7 filter invert" src="./linkedin.png" alt="LinkedIn" />
+            <p className="text-white text-base font-[poppins]">Linkedin</p>
+          </div>
+        </a>
+
+        {/* Leetcode */}
+        <a
+          href="https://leetcode.com/u/payal_gupta25/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="flex items-center gap-2">
+            <img className="w-6 h-6 filter invert" src="./leetcode.png" alt="Leetcode" />
+            <p className="text-white text-base font-[poppins]">Leetcode</p>
+          </div>
+        </a>
+      </div>
+
+      {/* Resume Button */}
+      <div className="text-center">
+        <a
+          href="https://drive.google.com/file/d/1m4w_niD8TQCHODT13c3UilxkyG9c0BVr/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="border border-white px-6 py-2 text-white rounded-lg font-semibold text-base sm:text-lg hover:bg-white hover:text-gray-900 transition"
+        >
+          Resume
+        </a>
+      </div>
+    </div>
+  );
 }
 
-export default Navbar
+export default Navbar;

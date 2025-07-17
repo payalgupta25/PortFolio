@@ -16,7 +16,7 @@ export default function About() {
       <div className="p-4 sm:p-8 md:p-16 flex flex-col-reverse md:flex-row items-center justify-around gap-10">
         {/* Left Section - Text */}
         <SpotlightCard
-          className="w-full md:w-1/2"
+          className="w-full md:w-3/5"
           spotlightColor="rgba(255, 255, 255, 0.25)"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-white py-2 px-3 text-center font-['Saira_Stencil_One']">
@@ -26,7 +26,7 @@ export default function About() {
             <h2 className="text-xl sm:text-2xl font-[poppins] p-3 underline text-center">
               Let’s Build Something Great Together
             </h2>
-            <p className="text-base sm:text-lg md:text-xl font-[poppins] text-center">
+            <p className="text-base sm:text-lg md:text-lg font-[poppins] text-center">
             Hey, I’m Payal Gupta — a passionate developer, open-source enthusiast, and designer who loves transforming ideas into intuitive, beautiful, and impactful solutions. Whether it's innovative hackathon builds or thoughtful personal projects, I believe in creating with purpose. Every line of code and every design decision reflects my dedication to making things that truly matter.
             <br />
             <br />

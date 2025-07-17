@@ -5,77 +5,93 @@ function Projects() {
     {
       id: 1,
       title: 'GoTogether',
-      desc: "GoTogether is a smart and intuitive ride-sharing platform I built to simplify everyday commuting while promoting eco-friendly travel. Designed with real-time ride creation, secure authentication, and easy user experience in mind, the app allows users to create or join rides based on their location, schedule, and preferences. Whether it's for daily college commutes or spontaneous travel plans, GoTogether connects like-minded travelers and helps reduce traffic, cost, and carbon footprint — all while building a reliable community of co-travelers.",
+      desc: "GoTogether is a smart and intuitive ride-sharing platform I built to simplify everyday commuting while promoting eco-friendly travel. Designed with real-time ride creation, secure authentication, and easy user experience in mind, the app allows users to create or join rides based on their location, schedule, and preferences.",
       tech: ['MongoDB', 'ExpressJS', 'NodeJS', 'React', 'Cloudinary', 'Tailwind CSS'],
-      github: 'https://github.com/payalgupta25/Twitter-Clone',
-      live: 'https://twitter-clone-p1l6.onrender.com',
-      bgClass: 'parallax0'
+      github: '',
+      live: '',
     },
     {
       id: 2,
       title: 'Twitter Clone',
-      desc: 'A full-stack Twitter-like social media application built using React, Node.js, Express, MongoDB, and TailwindCSS. This project replicates key features of Twitter including user authentication, post creation, likes, comments, follow system, and real-time updates. With a responsive design and intuitive UI, the app offers a seamless experience across devices. It also supports image uploads via Cloudinary and ensures secure access using JWT-based authentication. Ideal for learning and showcasing modern web development skills.',
+      desc: 'A full-stack Twitter-like social media application with user authentication, posts, likes, comments, follows, image uploads, and JWT-based security.',
       tech: ['MongoDB', 'ExpressJS', 'NodeJS', 'React', 'Cloudinary', 'Tailwind CSS'],
       github: 'https://github.com/payalgupta25/Twitter-Clone',
       live: 'https://twitter-clone-p1l6.onrender.com',
-      bgClass: 'parallax1'
     },
     {
       id: 3,
       title: 'Healing Touch',
-      desc: 'This is a stress-relieving website project made for the hackathon TechMinds. This project is under the theme Healthcare. Explore our curated playlists, calming podcasts, helpful articles, and proven stress-management tips, all designed to help you unwind and recharge.',
+      desc: 'A stress-relief website with curated playlists, calming podcasts, and mental wellness articles — made for the TechMinds hackathon under the Healthcare theme.',
       tech: ['HTML', 'CSS', 'JavaScript'],
       github: 'https://github.com/payalgupta25/healing-touch',
       live: 'https://healingtouch-webwizard.netlify.app/',
-      bgClass: 'parallax2'
     },
     {
       id: 4,
       title: 'Playlist Converter',
-      desc: 'Playlist Converter is a web-based application. The platform allows users to effortlessly convert music playlists from MP4 format to MP3, providing a seamless and user-friendly experience.',
+      desc: 'Convert music playlists from MP4 to MP3 with this seamless, web-based application.',
       tech: ['ExpressJS', 'NodeJS', 'React'],
       github: 'https://github.com/payalgupta25/Converter-MP4-playlist-to-MP3-.git',
-      live: 'https://github.com/payalgupta25/Twitter-Clone', // Update this if incorrect
-      bgClass: 'parallax3'
+      live: '',
     },
     {
       id: 5,
       title: 'TL;DR Genie',
-      desc: "TLDR Genie is a powerful summarization tool I created to cut through information overload. Whether it's lengthy articles, research papers, or meeting transcripts, TLDR Genie instantly condenses content into concise, easy-to-understand summaries. With a clean UI and smart summarization logic, it helps users grasp key points quickly without missing the essence — perfect for students, professionals, and curious minds who want more knowledge in less time.",
+      desc: 'TLDR Genie summarizes long content (articles, papers, transcripts) into concise summaries. Built for quick knowledge consumption.',
       tech: ['Gemini API', 'NodeJS', 'React'],
       github: '#',
-      live: '#', // Update this if incorrect
-      bgClass: 'parallax4'
+      live: '#',
     }
   ];
 
   return (
-    <>
-      <h2 className=" bg-[white] w-100vw z-100 p-5 relative h-auto font-bold text-black text-center font-['Saira_Stencil_One'] text-7xl">PROJECTS</h2>
+    <section className="bg-black text-white py-10 px-4 md:px-12 min-h-screen">
+      <h2 className="text-4xl md:text-6xl font-bold text-center mb-12 font-['Saira_Stencil_One'] underline">
+        PROJECTS
+      </h2>
 
-      {projectData.map((project, index) => (
-        <React.Fragment key={project.id}>
-          <div className={`${project.bgClass} relative h-[70vh]`}></div>
+      <div className="grid gap-10 md:grid-cols-2">
+        {projectData.map((project) => (
+          <div
+            key={project.id}
+            className="border border-gray-700 shadow-md rounded-2xl p-6 bg-[#0e0e0e] hover:shadow-xl transition duration-300"
+          >
+            <h3 className="text-2xl font-semibold mb-2 text-white">{project.title}</h3>
+            <p className="text-sm text-gray-300 mb-4">{project.desc}</p>
 
-          <div className="w-full h-auto bg-black border border-white">
-            <h2 className="font-bold text-white text-center font-['Saira_Stencil_One'] text-3xl p-6">{project.title}</h2>
-            <p className="p-6 text-white">{project.desc}</p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              {project.tech.map((techItem, idx) => (
+                <span
+                  key={idx}
+                  className="px-3 py-1 text-xs border rounded-full bg-[#232323] hover:bg-gray-800 text-gray-200 border-gray-600"
+                >
+                  {techItem}
+                </span>
+              ))}
+            </div>
 
-            <div className=" h-auto flex flex-row justify-between p-6 items-center bg-black text-white">
-              <div className="flex flex-wrap gap-2">
-                {project.tech.map((techItem, idx) => (
-                  <div key={idx} className="p-2 border border-white rounded-3xl">{techItem}</div>
-                ))}
-              </div>
-              <div className="flex flex-row gap-3">
-                <a href={project.github} className="underline">Github</a>
-                <a href={project.live} className="underline">Live Link</a>
-              </div>
+            <div className="flex gap-4 text-sm">
+              <a
+                href={project.github}
+                className="text-orange-400 underline hover:text-orange-300"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+              <a
+                href={project.live}
+                className="text-orange-400 underline hover:text-orange-300"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Live Link
+              </a>
             </div>
           </div>
-        </React.Fragment>
-      ))}
-    </>
+        ))}
+      </div>
+    </section>
   );
 }
 
