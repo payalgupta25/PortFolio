@@ -7,7 +7,7 @@ function Projects() {
       title: 'GoTogether',
       desc: "GoTogether is a smart and intuitive ride-sharing platform I built to simplify everyday commuting while promoting eco-friendly travel. Designed with real-time ride creation, secure authentication, and easy user experience in mind, the app allows users to create or join rides based on their location, schedule, and preferences.",
       tech: ['MongoDB', 'ExpressJS', 'NodeJS', 'React', 'Cloudinary', 'Tailwind CSS'],
-      github: '',
+      github: 'https://github.com/payalgupta25/GoTogether',
       live: '',
     },
     {
@@ -39,7 +39,15 @@ function Projects() {
       title: 'TL;DR Genie',
       desc: 'TLDR Genie summarizes long content (articles, papers, transcripts) into concise summaries. Built for quick knowledge consumption.',
       tech: ['Gemini API', 'NodeJS', 'React'],
-      github: '#',
+      github: 'https://github.com/payalgupta25/TL-DR-Genie',
+      live: '#',
+    },
+    {
+      id: 6,
+      title: 'T&C Analyzer',
+      desc: 'TLDR Genie summarizes long content (articles, papers, transcripts) into concise summaries. Built for quick knowledge consumption.',
+      tech: ['Gemini API', 'NodeJS', 'JavaScript'],
+      github: 'https://github.com/payalgupta25/tandc-analyzer',
       live: '#',
     }
   ];

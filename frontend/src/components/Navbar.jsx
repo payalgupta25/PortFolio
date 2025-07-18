@@ -61,16 +61,18 @@ function Navbar() {
       </div>
 
       {/* Resume Button */}
-      <div className="text-center">
+      <div className="text-center py-20 flex justify-center">
         <a
           href="https://drive.google.com/file/d/1m4w_niD8TQCHODT13c3UilxkyG9c0BVr/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
-          className="border border-white px-6 py-2 text-white rounded-lg font-semibold text-base sm:text-lg hover:bg-white hover:text-gray-900 transition"
+          className="flex items-center border border-black filter invert px-7 py-2 rounded-lg font-semibold text-base sm:text-lg hover:bg-white hover:text-gray-900 transition hover:invert-0"
         >
           Resume
+          <img className='h-5 w-5 ml-2' src="./drive.png" alt="Drive icon" />
         </a>
       </div>
+
     </div>
   );
 }
