@@ -18,7 +18,7 @@ function Navbar() {
           rel="noreferrer"
         >
           <div className="flex items-center gap-2">
-            <img className="w-6 h-6 filter invert" src="./github.png" alt="GitHub" />
+            <img className="w-6 h-6 filter invert" src="/github.png" alt="GitHub" />
             <p className="text-white text-base font-[poppins]">Github</p>
           </div>
         </a>
@@ -42,7 +42,7 @@ function Navbar() {
           rel="noreferrer"
         >
           <div className="flex items-center gap-2">
-            <img className="w-7 h-7 filter invert" src="./linkedin.png" alt="LinkedIn" />
+            <img className="w-7 h-7 filter invert" src="/linkedin.png" alt="LinkedIn" />
             <p className="text-white text-base font-[poppins]">Linkedin</p>
           </div>
         </a>
@@ -54,7 +54,7 @@ function Navbar() {
           rel="noopener noreferrer"
         >
           <div className="flex items-center gap-2">
-            <img className="w-6 h-6 filter invert" src="./leetcode.png" alt="Leetcode" />
+            <img className="w-6 h-6 filter invert" src="/leetcode.png" alt="Leetcode" />
             <p className="text-white text-base font-[poppins]">Leetcode</p>
           </div>
         </a>
@@ -69,7 +69,7 @@ function Navbar() {
           className="flex items-center border border-black filter invert px-7 py-2 rounded-lg font-semibold text-base sm:text-lg hover:bg-white hover:text-gray-900 transition hover:invert-0"
         >
           Resume
-          <img className='h-5 w-5 ml-2' src="./drive.png" alt="Drive icon" />
+          <img className='h-5 w-5 ml-2' src="/drive.png" alt="Drive icon" />
         </a>
       </div>
 

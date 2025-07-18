@@ -38,7 +38,7 @@ export default function About() {
         {/* Right Section - Image */}
         <div className="w-full md:w-auto flex justify-center">
           <TiltedCard
-            imageSrc="./payal.png"
+            imageSrc="/payal.png"
             altText="Payal Gupta"
             captionText="Payal Gupta"
             containerHeight="300px"
