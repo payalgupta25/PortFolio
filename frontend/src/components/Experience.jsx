@@ -23,6 +23,17 @@ const experienceData = [
     company: 'IEEE',
     details: [],
   },
+  {
+    date: 'Sept 2025 - Present',
+    role: 'Web Developer Intern',
+    company: 'Voxket.ai',
+    details: [
+      'Enhanced UI and fixed critical bugs to improve responsiveness, accessibility, and performance across pages.',
+      'Worked on API integrations, data handling, and dynamic components using Next.js, TypeScript, React Query.',
+      'Contributed to building an Agentic AI-based platform with scalable frontend architecture and clean code practices (Git, PR reviews).'
+
+    ],
+  }
 ];
 
 export default function Experience() {
@@ -39,8 +50,8 @@ export default function Experience() {
             <div className="absolute w-4 h-4 bg-white rounded-full border-2 border-black -left-[32px] top-1"></div>
 
             {/* Date */}
-            <div className="flex items-center gap-2 text-gray-400 text-lg mb-2">
-              <FaCalendarAlt className="text-gray-500" />
+            <div className="flex items-center gap-2 text-orange-400 text-lg mb-2">
+              <FaCalendarAlt className="text-orange-400" />
               {exp.date}
             </div>
 

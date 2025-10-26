@@ -49,6 +49,13 @@ function Projects() {
       tech: ['Gemini API', 'NodeJS', 'JavaScript'],
       github: 'https://github.com/payalgupta25/tandc-analyzer',
       live: '#',
+    },
+    {
+      id: 7,
+      title: 'LeetMark',
+      desc: 'LeetMark is a productivity-focused Chrome extension that helps you instantly capture, preview, and organize your LeetCode solutions in Markdown format. LeetMark makes documenting and exporting your LeetCode submissions effortless and beautiful.',
+      tech: ['Gemini API','Javascript', 'HTML/CSS'],
+      github: 'https://github.com/payalgupta25/Extension-LeetMark',
     }
   ];
 

@@ -63,7 +63,7 @@ function Navbar() {
       {/* Resume Button */}
       <div className="text-center py-20 flex justify-center">
         <a
-          href="https://drive.google.com/file/d/1m4w_niD8TQCHODT13c3UilxkyG9c0BVr/view?usp=sharing"
+          href="https://drive.google.com/file/d/1zuTODtu09_yLe4fr9pUeT42SGZnIKZ0A/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center border border-black filter invert px-7 py-2 rounded-lg font-semibold text-base sm:text-lg hover:bg-white hover:text-gray-900 transition hover:invert-0"
