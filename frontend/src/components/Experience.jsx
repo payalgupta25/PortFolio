@@ -2,6 +2,16 @@ import { FaCalendarAlt } from 'react-icons/fa';
 
 const experienceData = [
   {
+    date: 'Sept 2025 - Dec 2025',
+    role: 'Web Developer Intern',
+    company: 'Voxket.ai',
+    details: [
+      'Engineered scalable frontend modules for an Agentic AI platform, adhering to clean code standards and collaborative Git-based workflows.',
+      'Boosted search visibility by implementing SEO best practices, including optimized metadata, structured data, and server-side caching, improving page indexing speed.',
+      'Optimized UI performance and accessibility by fixing critical frontend issues and refactoring layouts; managed REST APIs and async data flows using Next.js, TypeScript, React Query, achieving a 20% Lighthouse score improvement'
+    ],
+  },
+  {
     date: 'June 2025 - Aug 2025',
     role: 'Mentor at Social Summer of Code',
     company: '',
@@ -23,17 +33,7 @@ const experienceData = [
     company: 'IEEE',
     details: [],
   },
-  {
-    date: 'Sept 2025 - Present',
-    role: 'Web Developer Intern',
-    company: 'Voxket.ai',
-    details: [
-      'Enhanced UI and fixed critical bugs to improve responsiveness, accessibility, and performance across pages.',
-      'Worked on API integrations, data handling, and dynamic components using Next.js, TypeScript, React Query.',
-      'Contributed to building an Agentic AI-based platform with scalable frontend architecture and clean code practices (Git, PR reviews).'
-
-    ],
-  }
+  
 ];
 
 export default function Experience() {

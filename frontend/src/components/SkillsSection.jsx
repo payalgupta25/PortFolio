@@ -182,7 +182,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import ScrollVelocity from "./ScrollVelocity"
 gsap.registerPlugin(ScrollTrigger);
 
 const SkillsSection = () => {
@@ -190,6 +190,12 @@ const SkillsSection = () => {
   const wheelRef = useRef(null);
   const outerImagesRef = useRef([]);
   const innerImagesRef = useRef([]);
+
+  // Initialize refs arrays
+  useEffect(() => {
+    outerImagesRef.current = [];
+    innerImagesRef.current = [];
+  }, []);
 
   const outerSources = [
     "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
@@ -235,12 +241,16 @@ const SkillsSection = () => {
     const inner = innerImagesRef.current;
 
     const positionImages = (images, radius, rotationOffset = 0) => {
+      if (!wheel) return;
+      
       const centerX = wheel.offsetWidth / 2;
       const centerY = wheel.offsetHeight / 2;
       const total = images.length;
       const slice = (2 * Math.PI) / total;
 
       images.forEach((item, i) => {
+        if (!item) return; // Skip null elements
+        
         const angle = i * slice + rotationOffset;
         const x = centerX + radius * Math.cos(angle);
         const y = centerY + radius * Math.sin(angle);
@@ -276,10 +286,17 @@ const SkillsSection = () => {
   }, [isLargeScreen]);
 
   return (
-    <div className="bg-black text-white px-4 py-20 flex flex-col lg:flex-row items-center justify-center gap-16 max-w-screen-xl mx-auto">
+    
+    
+    <div className="bg-black text-white px-4 py-20 flex flex-col  items-center justify-center gap-16 max-w-screen-xl mx-auto">
+      <ScrollVelocity
+          texts={["Skills Section", "What I know!"]}
+          velocity={40}
+          className="custom-scroll-text text-amber-50"
+        />
 
       {/* LEFT TEXT */}
-      <div className="flex flex-col gap-6 max-w-xl w-full md:w-1/2 text-center md:text-left">
+      {/* <div className="flex flex-col gap-6 max-w-xl w-full md:w-1/2 text-center md:text-left">
         <h1 className="text-5xl sm:text-7xl font-['Saira_Stencil_One'] mb-8">SKILLS</h1>
         <div className="flex flex-wrap gap-2 sm:gap-3 justify-center lg:justify-start">
           {[
@@ -294,7 +311,7 @@ const SkillsSection = () => {
             </span>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* RIGHT SKILLS DISPLAY */}
       {isLargeScreen ? (

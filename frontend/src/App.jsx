@@ -5,6 +5,7 @@ import Projects from "./components/Projects.jsx"
 import ContactSection from "./components/ContactSection.jsx"
 import CertificateSection from "./components/CertificateSection.jsx"
 import Experience from "./components/Experience.jsx"
+import SelectedWork from "./components/SelectedWork.jsx"
 
 function App() {
 
@@ -15,7 +16,8 @@ function App() {
       <SkillsSection/>
       {/* <CertificateSection/> */}
       <Experience/>
-      <Projects/>
+      {/* <Projects/> */}
+      <SelectedWork/>
       <ContactSection/>
     </div>
   )

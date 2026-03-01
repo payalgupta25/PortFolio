@@ -134,12 +134,19 @@ const Threads = ({
     if (!containerRef.current) return;
     const container = containerRef.current;
 
-    const renderer = new Renderer({ alpha: true });
-    const gl = renderer.gl;
-    gl.clearColor(0, 0, 0, 0);
-    gl.enable(gl.BLEND);
-    gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
-    container.appendChild(gl.canvas);
+    try {
+      const renderer = new Renderer({ alpha: true });
+      const gl = renderer.gl;
+      
+      if (!gl) {
+        console.error("WebGL context is not available");
+        return;
+      }
+      
+      gl.clearColor(0, 0, 0, 0);
+      gl.enable(gl.BLEND);
+      gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+      container.appendChild(gl.canvas);
 
     const geometry = new Triangle(gl);
     const program = new Program(gl, {
@@ -208,18 +215,22 @@ const Threads = ({
     }
     animationFrameId.current = requestAnimationFrame(update);
 
-    return () => {
-      if (animationFrameId.current)
-        cancelAnimationFrame(animationFrameId.current);
-      window.removeEventListener("resize", resize);
+      return () => {
+        if (animationFrameId.current)
+          cancelAnimationFrame(animationFrameId.current);
+        window.removeEventListener("resize", resize);
 
-      if (enableMouseInteraction) {
-        container.removeEventListener("mousemove", handleMouseMove);
-        container.removeEventListener("mouseleave", handleMouseLeave);
-      }
-      if (container.contains(gl.canvas)) container.removeChild(gl.canvas);
-      gl.getExtension("WEBGL_lose_context")?.loseContext();
-    };
+        if (enableMouseInteraction) {
+          container.removeEventListener("mousemove", handleMouseMove);
+          container.removeEventListener("mouseleave", handleMouseLeave);
+        }
+        if (container.contains(gl.canvas)) container.removeChild(gl.canvas);
+        gl.getExtension("WEBGL_lose_context")?.loseContext();
+      };
+    } catch (error) {
+      console.error("Error initializing Threads component:", error);
+      return () => {};
+    }
   }, [color, amplitude, distance, enableMouseInteraction]);
 
   return <div ref={containerRef} className="w-full h-full relative" {...rest} />;
