@@ -18,7 +18,7 @@ export default function Navbar() {
           alphaParticles={false}
           disableRotation={false}
           pixelRatio={1}
-      />
+      /> : null
       </div>
       
       {/* MARQUE */}
